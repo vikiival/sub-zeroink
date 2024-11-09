@@ -1,0 +1,18 @@
+[package]
+name = "minidao-common"
+version = "0.1.0"
+authors = ["[your_name] <[your_email]>"]
+edition = "2021"
+
+[dependencies]
+ink = { git = "https://github.com/use-ink/ink", branch = "master", default-features = false }
+superdao-traits = { git = "https://github.com/r0gue-io/multichain-superdao", branch = "main", default-features = false }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = ["ink/std", "superdao-traits/std"]
+ink-as-dependency = []
+e2e-tests = []
